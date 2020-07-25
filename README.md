@@ -36,8 +36,9 @@ game_config:
             type: 'cpu'
             alias: 'Skynet'
             dump_location: '<path_to_settings.yml>'
-    limit: <max_limit (int)>
-    deck_size: <q_of_cards (int)>
+    limit: <max_limit (int)>       # Aumentar el limite con cantidades de cartas cada vez mas altas reducen drasticamente el rendimiento
+    deck_size: <q_of_cards (int)>  # Puede especificar la cantidad que quiera, recuerde que cuantas mas cartas mas computación
+    							   # requerirá el programa
     lower_threshold_limit: <porcentual (int/float)>
     higher_threshold_limit: <porcentual (int/float)>
 ````
@@ -52,6 +53,14 @@ $ (env) python main.py
 # Ejecución...
 ````
 
+[![Game show](https://gyazo.com/32e466adeb5fd04161b3f383f2ae4c2e/raw)]()
+
+> Ejemplo de ejecución sencilla
+
+En caso de que quisieramos hacer que jueguen 2 CPUs entre si, habría que definir el tipo de los dos jugadores posibles (p1 y p2) como 'cpu':
+
+![Game show](https://gyazo.com/206c825671ca976b8d51879084831754/raw)
+
 --------
 
 Para utilizar el backend se debe utilizar el siguiente comando (una vez estemos utilizando el virtual environment):
@@ -62,10 +71,15 @@ $ (env) python app.py
 
 Esto levantará un servidor web de desarrollo para testear el aplicativo.
 
-Las rutas importantes serán:
+Las rutas existentes serán:
 
+- **Index**: Muestra los paths a **p1** y **p2**
 - **/p1**: Dump del player con id **p1**
 - **/p2**: Dump del player con id **p2**
+
+![Game show](https://gyazo.com/dcca411f988d57f89570e93e325ec026/raw)
+
+> La animación que muestra el funcionamiento del backend esta mostrando el brain del CPU Player P2
 
 ## Features requeridas
 
