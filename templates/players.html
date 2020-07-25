@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CPUs Brain of player: {{ player }}</title>
+        <style>
+            #file_data {
+                font-family: Helvetica;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="file_data">{{ file_data|safe }}</div>
+
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/nanobar/0.2.1/nanobar.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script>
+            function update_file_content() {
+                $.getJSON('/get_data_{{ player }}', function(data) {
+                    $('#file_data').html(data['data']);
+                });
+                setTimeout(function() {
+                    update_file_content();
+                }, 750);
+            }
+
+            $(document).ready(function(){
+                update_file_content();
+            });
+        </script>
+    </body>
+</html>
