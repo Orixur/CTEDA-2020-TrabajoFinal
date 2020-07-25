@@ -13,7 +13,7 @@ Un jugador pierde cuando descarta una carta que hace que el **monto** de cartas 
 Primero y antes que nada, se deben instalar las dependencias de la librería utilizando el comando:
 
 ````bash
-$ <prev_path>\<virtual_env_folder>\Scripts>activate  # Use virtual environment
+$ <prev_path>\<virtual_env_folder>\Scripts\activate  # Use virtual environment
 $ pip install -r requirements.txt
 ````
 
@@ -37,8 +37,7 @@ game_config:
             alias: 'Skynet'
             dump_location: '<path_to_settings.yml>'
     limit: <max_limit (int)>       # Aumentar el limite con cantidades de cartas cada vez mas altas reducen drasticamente el rendimiento
-    deck_size: <q_of_cards (int)>  # Puede especificar la cantidad que quiera, recuerde que cuantas mas cartas mas computación
-    							   # requerirá el programa
+    deck_size: <q_of_cards (int)>  # Puede especificar la cantidad que quiera, recuerde que cuantas mas cartas mas computación requerirá el programa
     lower_threshold_limit: <porcentual (int/float)>
     higher_threshold_limit: <porcentual (int/float)>
 ````
