@@ -2,7 +2,7 @@ import os
 import sys
 import yaml
 
-from game.game import Game
+from game.game_controller import Game
 from game.node import Node
 from game.cpu_controller import CPUBrain
 from game.human_controller import HumanController
