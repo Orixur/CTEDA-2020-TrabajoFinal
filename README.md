@@ -31,11 +31,11 @@ game_config:
         p1: 
             type: 'human'
             alias: 'Joe Doe'
-            dump_location: '<path_to_settings.yml>'
+            dump_location: '<dump_location.txt>'
         p2: 
             type: 'cpu'
             alias: 'Skynet'
-            dump_location: '<path_to_settings.yml>'
+            dump_location: '<dump_location.txt>'
     limit: <max_limit (int)>       # Aumentar el limite con cantidades de cartas cada vez mas altas reducen drasticamente el rendimiento
     deck_size: <q_of_cards (int)>  # Puede especificar la cantidad que quiera, recuerde que cuantas mas cartas mas computación requerirá el programa
     lower_threshold_limit: <porcentual (int/float)>
